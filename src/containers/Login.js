@@ -77,6 +77,11 @@ const Login = (props) => {
             dataResponce.then(async (response) => {
                 if (response.success) {
                     if (response["userData"] && response["userData"].blocked) {
+                        await service.logoutAPI();
+                        await dispatch({
+                            type: "AUTHENTICATE",
+                            login: false
+                        })
                         props.history.push('/blockeduser');
                     } else {
                         await dispatch({
