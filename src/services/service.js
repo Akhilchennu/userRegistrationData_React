@@ -1,4 +1,6 @@
-const url='https://user-registration-nodeserver.herokuapp.com'
+// const url='https://user-registration-nodeserver.herokuapp.com'
+
+const url='http://localhost:3001'
 
 const signupAPI = (name, email, password) => {
     return fetch(`${url}/signup`, {
