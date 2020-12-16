@@ -1,5 +1,4 @@
-// const url='https://appgen-lets-chat.herokuapp.com'
-const url='http://localhost:3001'
+const url='https://user-registration-nodeserver.herokuapp.com'
 
 const signupAPI = (name, email, password) => {
     return fetch(`${url}/signup`, {
