@@ -22,6 +22,7 @@ const blockedUserApi = (email) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         }, credentials: 'include',
+        withCredentials: true,
         body: JSON.stringify({
             email: email
         })
@@ -35,6 +36,7 @@ const loginAPI = (email, password) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         }, credentials: 'include',
+        withCredentials: true,
         body: JSON.stringify({
             username: email,
             password: password
@@ -48,7 +50,8 @@ const getAuth=()=>{
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
-        }, credentials: 'include'
+        }, credentials: 'include',
+        withCredentials: true,
     }).then(response => response.json());
 }
 
@@ -58,7 +61,8 @@ const logoutAPI=()=>{
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
-        }, credentials: 'include'
+        }, credentials: 'include',
+        withCredentials: true,
     }).then(response => response.json()); 
 }
 
@@ -68,7 +72,8 @@ const getUserList=()=>{
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
-        }, credentials: 'include'
+        }, credentials: 'include',
+        withCredentials: true,
     }).then(response => response.json()); 
 }
 
